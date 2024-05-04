@@ -73,3 +73,16 @@ Select 'Private' to make the Project or Template accessible by only you.
 ### Templates
 
 A template is a project pre-configured with settings and optionally epics and features. Use templates as a quick way to get started with an estimate based on standard settings.
+
+# Installation of the local development environment
+
+## Azure Cosmos DB emulator
+
+docker run \
+    --publish 8081:8081 \
+    --publish 10250-10255:10250-10255 \
+    --interactive \
+    --tty \
+    mcr.microsoft.com/cosmosdb/linux/azure-cosmos-emulator:latest
+
+Navigate to https://localhost:8081/_explorer/index.html to access the data explorer.
